@@ -1,0 +1,29 @@
+{
+  "name": "ADD NAME HERE",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ADD DESCRIPTION HERE",
+  "main": "app.js",
+  "keywords": [
+    "spa",
+    "pwa"
+  ],
+  "author": {
+    "name": "Bates, Howard",
+    "email": "hbates@northmen.org"
+  },
+  "scripts": {
+    "start": "node ./bin/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/????/????"
+  },
+  "engines": {
+    "node": ">= 7.2.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "latest"
+  }
+}

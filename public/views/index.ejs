@@ -1,0 +1,59 @@
+<%include header.ejs%>
+
+<div id="top">
+    <div class="row">
+         <div class="medium-8 columns medium-centered">
+              <h2 class="text-center">Something goes here</h2>
+         </div>
+    </div>
+    <div class="row">
+        <div class="medium-8 columns medium-centered">
+            <div class="success button expanded" id="begin">Begin</div>
+        </div>
+    </div>
+    <div class="row" id="SSL_Instructions">
+        <div class="medium-8 columns medium-centered">
+            <p>First, go <a href="https://sourceforge.net/projects/openssl/files/latest/download?source=typ_redirect">HERE</a> & download OpenSSL for Windows.</p>
+            <p>The initial step is to create a private key. As an example we can use the following command, generating a file called server.enc.key:</p>
+            <p><code>openssl genrsa -out server.enc.key 1024</code></p>
+            <p>Once we have our key generated we need to issue a certificate signing request. A request can be generated using the following command:</p>
+            <p><code>openssl req -new -key server.enc.key -out server.csr</code></p>
+            <p>Finally we have to self-sign the certificate. The self-signed certificate will generate an error in browsers. The reason is that the signing certificate authority is unknown and therefore not trusted. To generate a temporary certificate server.crt we need to issue the following command:</p>
+            <p><code>openssl x509 -req -days 365 -in server.csr -signkey server.enc.key -out server.crt</code></p>
+            <p>The created certificate will expire in 365 days after issuing.</p>
+            <p>Put the .key and .crt files in your data/certs folder.</p>
+        </div>
+    </div>
+</div>
+<div id="sure">
+    <div class="row" id="sure1">
+        <div class="medium-8 columns medium-centered">
+            <h2 class="text-center">Are you sure?</h2>
+        </div>
+    </div>
+    <div class="row" id="sure2">
+        <form id="theForm">
+            <div class="medium-5 columns text-right">
+                <input type="radio" name="question" id="yes" value="1">
+            </div>
+            <div class="medium-5 columns text-left">
+                <input type="radio" name="question" id="no" value="0">
+            </div>
+        </form>
+    </div>
+    <div class="row" id="sure3">
+        <div class="medium-5 columns text-right">
+            <h5 class="label">Yes</h5>
+        </div>
+        <div class="medium-5 columns text-left">
+            <h5 class="label">No</h5>
+        </div>
+    </div>
+</div>
+<div class="row" id="endDiv">
+    <div class="medium-8 columns medium-centered">
+        <div class="alert button expanded" id="end">End</div>
+    </div>
+</div>
+
+<% include footer.ejs %>

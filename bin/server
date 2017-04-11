@@ -1,0 +1,4 @@
+"use strict";
+
+const APP = require('../app.js');
+new APP();
