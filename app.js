@@ -45,7 +45,7 @@ class app {
                               }
                          });
                     } else if (request.headers['x-requested-with'] === 'XMLHttpRequest1') {
-                         //Write other methods of handling data here.
+                         //Other methods of handling data go here
                     } else {
                          response.writeHead(405, "Method not supported", {'Content-Type': 'text/html'});
                          response.end('<html><head><title>405 - Method not supported</title></head><body><h1>Method not supported.</h1></body></html>');
