@@ -2,8 +2,6 @@
 
 const IO = require('fs');
 
-let userTrips = [];
-
 class DataHandler {
     static handleUserData(data) {
         let isTrue = 0;
