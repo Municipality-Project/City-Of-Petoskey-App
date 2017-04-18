@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "A real life of example of making an app for Petoskey",
-  "main": "app.js",
+  "main": "bin/server",
   "keywords": [
     "spa",
     "pwa"
