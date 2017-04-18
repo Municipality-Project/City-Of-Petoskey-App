@@ -7,7 +7,7 @@ body {
   font-family: "Lato"; }
 
 #header {
-  background-color: #1893e4;
+  background-color: #0a4063;
   font-size: 36px;
   color: white;
   font-weight: 800;
@@ -30,7 +30,7 @@ body {
   margin-right: 1.4rem;
   padding: 10px;
   padding-top: 20px;
-  background-color: #1893e4; }
+  background-color: #0a4063; }
 
 .tabInner {
   margin-top: .5rem;
@@ -46,7 +46,7 @@ body {
 .c-menu {
   position: fixed;
   z-index: 200;
-  background-color: #1893e4;
+  background-color: #0a4063;
   transition: transform 0.3s; }
 
 .c-menu__items {
@@ -59,7 +59,7 @@ body {
  */
 .c-menu__close {
   color: #fff;
-  background-color: #1893e4;
+  background-color: #0a4063;
   font-size: 14px;
   border: none;
   box-shadow: none;
@@ -126,7 +126,7 @@ body.has-active-menu {
   display: block;
   text-align: center;
   border-top: solid 1px white;
-  border-bottom: solid 1px #1893e4; }
+  border-bottom: solid 1px #0a4063; }
 
 .c-menu--slide-left .c-menu__item:first-child,
 .c-menu--slide-right .c-menu__item:first-child,
@@ -183,7 +183,7 @@ body.has-active-menu {
   .o-wrapper.has-push-right {
     transform: translateX(-300px); } }
 .pageHeader {
-  color: #1893e4;
+  color: #0a4063;
   font-size: 30px;
   font-weight: 600;
   padding-top: .6rem;
@@ -196,12 +196,12 @@ body.has-active-menu {
   margin-bottom: 20px; }
 
 .bodyHeader {
-  color: #1893e4;
+  color: #0a4063;
   font-size: 18px;
   font-weight: bold; }
 
 .footer {
-  background-color: #1893e4;
+  background-color: #0a4063;
   font-size: 14px;
   padding-left: 10px;
   padding-right: 10px;
@@ -253,7 +253,7 @@ body.has-active-menu {
 .form button {
   text-transform: uppercase;
   outline: 0;
-  background: #2245b3;
+  background: #0a4063;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -272,7 +272,7 @@ body.has-active-menu {
   font-size: 12px; }
 
 .form .message a {
-  color: #1893e4;
+  color: #0a4063;
   text-decoration: none; }
 
 .form .register-form {
