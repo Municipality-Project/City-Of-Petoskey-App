@@ -24,6 +24,14 @@ body {
   padding-bottom: .3rem;
   text-shadow: 1px 1px 1px #000; }
 
+#map {
+  height: 100%; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 .tabOuter {
   margin-top: 1.6rem;
   margin-left: 1.4rem;
