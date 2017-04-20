@@ -25,7 +25,7 @@ class app {
                          response.writeHead(200, {'Content-Type': contentType});
                          response.end(EJS.render(string, {
                               data: this.ejsData,
-                              filename: 'index.html'
+                              filename: 'index.ejs'
                          }));
                     } else {
                          response.writeHead(200, {'Content-Type': contentType});
@@ -58,8 +58,8 @@ class app {
                     this.render(request.url.slice(1), 'image/png', httpHandler, 'binary');
                } else if (request.url.indexOf('.jpg') >= 0) {
                     this.render(request.url.slice(1), 'image/jpeg', httpHandler, 'binary');
-               } else if (request.url.indexOf('/') >= 0) {
-                    this.render('public/views/index.ejs', 'text/html', httpHandler, 'utf-8');
+               } else if (request.url.indexOf('.html') >= 0) {
+                    this.render('public/views/index.html', 'text/html', httpHandler, 'utf-8');
                } else {
                     this.render(`HEY! What you're looking for: It's not here!`, 'text/html', httpHandler, 'utf-8');
                }
