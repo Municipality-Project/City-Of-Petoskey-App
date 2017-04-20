@@ -25,7 +25,7 @@ class app {
                          response.writeHead(200, {'Content-Type': contentType});
                          response.end(EJS.render(string, {
                               data: this.ejsData,
-                              filename: 'index.ejs'
+                              filename: 'index.html'
                          }));
                     } else {
                          response.writeHead(200, {'Content-Type': contentType});
