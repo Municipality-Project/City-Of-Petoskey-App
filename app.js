@@ -59,7 +59,7 @@ class app {
                } else if (request.url.indexOf('.jpg') >= 0) {
                     this.render(request.url.slice(1), 'image/jpeg', httpHandler, 'binary');
                } else if (request.url.indexOf('/') >= 0) {
-                    this.render('public/views/index.html', 'text/html', httpHandler, 'utf-8');
+                    this.render('index.html', 'text/html', httpHandler, 'utf-8');
                } else if (request.url.indexOf('.html') >= 0) {
                     this.render(request.url.slice(1), 'text/html', httpHandler, 'utf-8');
                } else {
