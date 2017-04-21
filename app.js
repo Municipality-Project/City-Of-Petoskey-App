@@ -1,6 +1,6 @@
 "use strict";
 
-const DATA_HANDLER = require('./node/DataHandler.js'), IO = require(`fs`);
+const DATA_HANDLER = require('./node/DataHandler.js');
 
 class app {
      constructor() {
@@ -13,7 +13,10 @@ class app {
           const HTTP = require('http');
           const PORT = process.env.PORT || 8000;
           const EJS = require('ejs');
+          const URL = require('url');
+          const IO = require(`fs`);
           HTTP.createServer((request, response) => {
+               let path = URL.parse(request.url).pathname;
                let httpHandler = (error, string, contentType) => {
                     if (error) {
                          response.writeHead(500, {'Content-Type': 'text/plain'});
@@ -31,7 +34,17 @@ class app {
                          response.writeHead(200, {'Content-Type': contentType});
                          response.end(string, 'binary');
                     }
+
                };
+
+               switch (path) {
+                    case '/subpage':
+                         document = IO.readFile(__dirname + '/subpage.html', httpHandler);
+                         break;
+                    default:
+                         document = IO.readFile(__dirname + '/index.html', httpHandler);
+                         break;
+               }
                if (request.method === 'POST') {
                     if (request.headers['x-requested-with'] === 'XMLHttpRequest0') {
                          request.on('data', (data) => {
