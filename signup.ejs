@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,22 +22,29 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-</head>
+</head>-->
+<%include header.ejs%>
+
 <body>
-<header class="expanded" id="loginHeader"><a href="index.html">&nbsp;&nbsp;&larr; Home</a></header>
+
+<header class="expanded" id="loginHeader"><a href="index.ejs">&nbsp;&nbsp;&larr; Home</a></header>
 <br>
 <img src="public/images/petoskeylogo.png" class="float-center loginImage" width="200">
 
 <div class="login-page">
     <div class="form">
-        <form class="login-form">
-            <input type="text" placeholder="email address"/>
-            <input type="password" placeholder="password"/>
-            <button><a class="login" href="index.html">login</a></button>
-            <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
-        </form>
+    <form class="login-form">
+        <input type="text" placeholder="full name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="login.ejs">Sign In</a></p>
+    </form>
     </div>
 </div>
 
+<% include footer.ejs %>
+<!--
+
 </body>
-</html>
+</html>-->

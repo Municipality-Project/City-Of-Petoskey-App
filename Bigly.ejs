@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,13 +22,15 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-</head>
+</head>-->
+<%include header.ejs%>
+
 <header>
     <div class="expanded text-center" id="header">
         City of Petoskey
     </div>
     <div class="expanded text-left" style="padding-top: .6rem; padding-bottom: .6rem" id="menu">
-        <a style="margin-left: 12px; margin-right: 12px" href="Report.html">Report an Infrastructure Issue</a><a href="Parks.html" style="margin-left: 12px; margin-right: 12px">Parks and Rec.</a><a href="Report.html" style="margin-left: 12px; margin-right: 12px">City Guide</a><a href="Calendar.html" style="margin-left: 12px; margin-right: 12px">Calendar</a><a href="Resources.html" style="margin-left: 12px; margin-right: 12px">Resources</a><span class="text-right" id="login"><a href="login.html" style="text-shadow:1px 1px 1px #000; margin-left: 100px;">Login</a> | <a href="signup.html" style="text-shadow:1px 1px 1px #000;">Create Account</a></span>
+        <a style="margin-left: 12px; margin-right: 12px" href="Report.ejs">Report an Infrastructure Issue</a><a href="Parks.ejs" style="margin-left: 12px; margin-right: 12px">Parks and Rec.</a><a href="Report.ejs" style="margin-left: 12px; margin-right: 12px">City Guide</a><a href="Calendar.ejs" style="margin-left: 12px; margin-right: 12px">Calendar</a><a href="Resources.ejs" style="margin-left: 12px; margin-right: 12px">Resources</a><span class="text-right" id="login"><a href="login.ejs" style="text-shadow:1px 1px 1px #000; margin-left: 100px;">Login</a> | <a href="signup.ejs" style="text-shadow:1px 1px 1px #000;">Create Account</a></span>
     </div>
 </header>
 <body>
@@ -88,7 +90,8 @@
 
 <div style="margin-right: 40px;"><div><span class="bodyHeader">This could be an interesting article or post</span></div></div>
 
-</body>
+<% include footer.ejs %>
+<!--
 <div class="footerTop expanded text-center">
     Follow us<br>
     <a href="https://www.facebook.com/PetoskeyArea/"><img src="public/images/fblogo.png" width="50"></a>&nbsp;<a href="https://twitter.com/PetoskeyArea/"><img src="public/images/twitter.png" width="50"></a>&nbsp;<a href="https://www.instagram.com/petoskeyarea/"><img src="public/images/insta.png" width="50"></a>&nbsp;<a href="https://www.youtube.com/user/PetoskeyArea/"><img src="public/images/youtube.png" width="50"></a>&nbsp;<a href="https://www.pinterest.com/petoskeyarea/"><img src="public/images/pintrest.png" width="50"></a>&nbsp;<a href="http://blog.petoskeyarea.com/"><img src="public/images/blog.png" width="50"></a>
@@ -98,4 +101,5 @@
     © 2017 Copyright by Petoskey Area Visitors Bureau • All Rights Reserved.
 </div>
 <script src="public/javascripts/main.js"></script>
-</html>
+</body>
+</html>-->
