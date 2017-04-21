@@ -117,7 +117,7 @@
       * Add to global namespace.
       */
      window.Menu = Menu;
-    
+
 })(window);
 
 var slideLeft = new Menu({

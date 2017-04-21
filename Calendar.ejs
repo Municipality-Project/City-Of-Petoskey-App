@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-</head>
+</head>-->
+<%include header.ejs%>
+
 <header>
     <div class="expanded text-center" id="header">
         City of Petoskey
@@ -30,19 +32,19 @@
     <div class="expanded text-left" id="menu">
         <div id="o-wrapper" class="o-wrapper">
             <div class="c-buttons">
-                <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.html">Login</a> | <a href="signup.html">Create Account</a></span>
+                <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
             </div>
         </div>
         <div id="c-mask" class="c-mask"></div>
         <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
             <button class="c-menu__close">&larr; Close Menu</button>
             <ul class="c-menu__items">
-                <li class="c-menu__item"><a href="index.html" class="c-menu__link">Home</a></li>
-                <li class="c-menu__item"><a href="Report.html" class="c-menu__link">Report an Infrastructure Issue</a></li>
-                <li class="c-menu__item"><a href="Parks.html" class="c-menu__link">Parks and Rec.</a></li>
-                <li class="c-menu__item"><a href="Guide.html" class="c-menu__link">City Guide</a></li>
-                <li class="c-menu__item"><a href="Calendar.html" class="c-menu__link">Calendar</a></li>
-                <li class="c-menu__item"><a href="Resources.html" class="c-menu__link">Resources</a></li>
+                <li class="c-menu__item"><a href="index.ejs" class="c-menu__link">Home</a></li>
+                <li class="c-menu__item"><a href="Report.ejs" class="c-menu__link">Report an Infrastructure Issue</a></li>
+                <li class="c-menu__item"><a href="Parks.ejs" class="c-menu__link">Parks and Rec.</a></li>
+                <li class="c-menu__item"><a href="Guide.ejs" class="c-menu__link">City Guide</a></li>
+                <li class="c-menu__item"><a href="Calendar.ejs" class="c-menu__link">Calendar</a></li>
+                <li class="c-menu__item"><a href="Resources.ejs" class="c-menu__link">Resources</a></li>
             </ul>
         </nav>
     </div>
@@ -52,8 +54,8 @@
 
 <iframe src="https://calendar.google.com/calendar/embed?src=40g3bcgm55tblcpddc2k40fol0%40group.calendar.google.com&ctz=America/New_York" style="border: 0; margin-bottom: 120px" width="420" height="300" frameborder="0" scrolling="no"></iframe>
 
-</body>
-
+<% include footer.ejs %>
+<!--
 <div class="footerTop expanded text-center">
     Follow us<br>
     <a href="https://www.facebook.com/PetoskeyArea/"><img src="public/images/fblogo.png" width="50"></a>&nbsp;<a href="https://twitter.com/PetoskeyArea/"><img src="public/images/twitter.png" width="50"></a><a href="https://www.instagram.com/petoskeyarea/"><img src="public/images/insta.png" width="55"></a><a href="https://www.youtube.com/user/PetoskeyArea/"><img src="public/images/youtube.png" width="50"></a>&nbsp;<a href="https://www.pinterest.com/petoskeyarea/"><img src="public/images/pinterest.png" width="50"></a>&nbsp;<a href="http://blog.petoskeyarea.com/"><img src="public/images/blog.png" width="50"></a>
@@ -64,4 +66,5 @@
 </div>
 
 <script src="public/javascripts/main.js"></script>
-</html>
+</body>
+</html>-->
