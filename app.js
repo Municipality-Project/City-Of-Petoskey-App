@@ -1,6 +1,6 @@
 "use strict";
 
-const DATA_HANDLER = require('./node/DataHandler.js'), IO = require(`fs`);
+const DATA_HANDLER = require('./node/DataHandler.js');
 
 class app {
      constructor() {
@@ -59,8 +59,8 @@ class app {
                } else if (request.url.indexOf('.jpg') >= 0) {
                     this.render(request.url.slice(1), 'image/jpeg', httpHandler, 'binary');
                } else if (request.url.indexOf('/') >= 0) {
-                    this.render('index.html', 'text/html', httpHandler, 'utf-8');
-               } else if (request.url.indexOf('.html') >= 0) {
+                    this.render('index.ejs', 'text/html', httpHandler, 'utf-8');
+               } else if (request.url.indexOf('.ejs') >= 0) {
                     this.render(request.url.slice(1), 'text/html', httpHandler, 'utf-8');
                } else {
                     this.render(`HEY! What you're looking for: It's not here!`, 'text/html', httpHandler, 'utf-8');
