@@ -83,7 +83,7 @@ html, body {
   font-size: 14px;
   border: none;
   box-shadow: none;
-  border-radius: none;
+  //border-radius: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -316,8 +316,8 @@ body.has-active-menu {
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  //-webkit-transition: all 0.3 ease;
+  //transition: all 0.3 ease;
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
@@ -399,28 +399,4 @@ body.has-active-menu {
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode:forwards; /*IE 10+*/
-}
-
-@media all and (max-width: 959px) {
-
-  .content.700 {display:block;}
-  .content.490 {display:none;}
-  .content.290 {display:none;}
-
-}
-
-@media all and (max-width: 720px) {
-
-  .content.700{display:none;}
-  .content.490{display:block;}
-  .content.290{display:none;}
-
-}
-
-@media all and (max-width: 479px) {
-
-  .content.700{display:none;}
-  .content.490{display:none;}
-  .content.290{display:block;}
-
 }
