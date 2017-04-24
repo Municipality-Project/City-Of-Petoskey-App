@@ -32,7 +32,7 @@
     <div class="expanded text-left" id="menu">
         <div id="o-wrapper" class="o-wrapper">
             <div class="c-buttons">
-                <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
+                <button id="c-button--slide-left" class="c-button"><img src="../images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
             </div>
         </div>
         <div id="c-mask" class="c-mask"></div>
@@ -52,13 +52,11 @@
 
 <body>
 
-<div class="pageHeader text-center">Resources</div>
+<div class="pageHeader text-center">Report an Infrastructure Issue</div>
 
-<div class="bodyText" style="margin-bottom: 220px"><span class="bodyHeader">Contact: <br></span>
-    Ph: 1.800.845.2828<br>
-    Email<br>
-    Petoskey Area Visitors Bureau 401 East Mitchell Street Petoskey, MI 49770
-</div>
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
 
 <% include footer.ejs %>
 <!--
@@ -71,5 +69,6 @@
     © 2017 Copyright by Petoskey Area Visitors Bureau • All Rights Reserved.
 </div>
 </body>
+
 <script src="public/javascripts/main.js"></script>
 </html>-->
