@@ -1,0 +1,36 @@
+<%include header.ejs%>
+
+<header>
+    <div class="expanded text-center" id="header">
+        City of Petoskey
+    </div>
+    <div class="expanded text-left" id="menu">
+        <div id="o-wrapper" class="o-wrapper">
+            <div class="c-buttons">
+                <button id="c-button--slide-left" class="c-button"><img src="../images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
+            </div>
+        </div>
+        <div id="c-mask" class="c-mask"></div>
+        <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            <button class="c-menu__close">&larr; Close Menu</button>
+            <ul class="c-menu__items">
+                <li class="c-menu__item"><a href="index.ejs" class="c-menu__link">Home</a></li>
+                <li class="c-menu__item"><a href="report.ejs" class="c-menu__link">Report an Infrastructure Issue</a></li>
+                <li class="c-menu__item"><a href="parks.ejs" class="c-menu__link">Parks and Rec.</a></li>
+                <li class="c-menu__item"><a href="guide.ejs" class="c-menu__link">City Guide</a></li>
+                <li class="c-menu__item"><a href="calendar.ejs" class="c-menu__link">Calendar</a></li>
+                <li class="c-menu__item"><a href="resources.ejs" class="c-menu__link">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+
+<div class="pageHeader text-center">Report an Infrastructure Issue</div>
+
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
+
+<% include footer.ejs %>
