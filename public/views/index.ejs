@@ -1,44 +1,69 @@
-<%include public/views/header.ejs%>
+<%include header.ejs %>
 
+<header>
+    <div class="expanded text-center" id="header">
+        City of Petoskey
+    </div>
+    <div class="expanded text-left" id="menu">
+        <div id="o-wrapper" class="o-wrapper">
+            <div class="c-buttons">
+                <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
+            </div>
+        </div>
+        <div id="c-mask" class="c-mask"></div>
+        <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            <button class="c-menu__close">&larr; Close Menu</button>
+            <ul class="c-menu__items">
+                <li class="c-menu__item"><a href="home.html" class="c-menu__link">Home</a></li>
+                <li class="c-menu__item"><a href="Report.ejs" class="c-menu__link">Report an Infrastructure Issue</a></li>
+                <li class="c-menu__item"><a href="Parks.ejs" class="c-menu__link">Parks and Rec.</a></li>
+                <li class="c-menu__item"><a href="Guide.ejs" class="c-menu__link">City Guide</a></li>
+                <li class="c-menu__item"><a href="Calendar.ejs" class="c-menu__link">Calendar</a></li>
+                <li class="c-menu__item"><a href="Resources.ejs" class="c-menu__link">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
 <div class="tabOuter text-center medium-centered">
-    <div class="tabInner">
-        <img src="public/images/road-1.jpg" width="250">
+    <a href="Report.ejs" class="tabInner">
+        <img src="public/images/road-1.jpg" alt="road" width="250">
         <div class="tabText">
             Report an Infrastructure Issue
         </div>
-    </div>
+    </a>
 </div>
 <div class="tabOuter text-center medium-centered">
-    <div class="tabInner">
-        <img src="public/images/park.jpg" width="250">
+    <a href="Parks.ejs" class="tabInner">
+        <img src="public/images/park.jpg" alt="park" width="250">
         <div class="tabText">
             Parks and Rec.
         </div>
-    </div>
+    </a>
 </div>
 <div class="tabOuter text-center medium-centered">
-    <div class="tabInner">
-        <img src="public/images/downtown.jpg" width="250">
+    <a href="Guide.ejs" class="tabInner">
+        <img src="public/images/downtown.jpg" alt="downtown" width="250">
         <div class="tabText">
             City Guide
         </div>
-    </div>
+    </a>
 </div>
 <div class="tabOuter text-center medium-centered">
-    <div class="tabInner">
-        <img src="public/images/images.jpg" width="250">
+    <a href="Calendar.ejs" class="tabInner">
+        <img src="public/images/images.jpg" alt="calendar" width="250">
         <div class="tabText">
             Calendar
         </div>
-    </div>
+    </a>
 </div>
 <div class="tabOuter text-center medium-centered">
-    <div class="tabInner">
-        <img src="public/images/stone.jpg" width="250">
+    <a href="Resources.ejs" class="tabInner">
+        <img src="public/images/stone.jpg" alt="petoskey stone" width="250">
         <div class="tabText">
             Resources
         </div>
-    </div>
+    </a>
 </div>
-<br>
-<% include public/views/footer.ejs %>
+
+<% include footer.ejs %>

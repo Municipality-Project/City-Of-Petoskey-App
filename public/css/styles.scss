@@ -29,6 +29,16 @@ body {
   text-shadow:1px 1px 1px #000;
 }
 
+#map {
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .tabOuter {
   margin-top: 1.6rem;
   margin-left: 1.4rem;
@@ -389,4 +399,28 @@ body.has-active-menu {
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@media all and (max-width: 959px) {
+
+  .content.700 {display:block;}
+  .content.490 {display:none;}
+  .content.290 {display:none;}
+
+}
+
+@media all and (max-width: 720px) {
+
+  .content.700{display:none;}
+  .content.490{display:block;}
+  .content.290{display:none;}
+
+}
+
+@media all and (max-width: 479px) {
+
+  .content.700{display:none;}
+  .content.490{display:none;}
+  .content.290{display:block;}
+
 }
