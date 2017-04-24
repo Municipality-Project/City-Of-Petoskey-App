@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<!--
-AUTHOR: Me
-VERSION: 1.0
-CREATED: 4.20.2017
-ASSIGNMENT: Municipality App
--->
-
-<!--
-    TODO:
--->
-
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <link href="../css/styles.css" rel="stylesheet">
+    <link href="public/css/styles.css" rel="stylesheet">
     <title>City of Petoskey</title>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" sizes="57x57" href="public/favicons.ico/apple-icon-57x57.png">
@@ -33,4 +22,24 @@ ASSIGNMENT: Municipality App
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-</head>
+</head>-->
+<%include /public/views/header.ejs%>
+<body>
+
+<header class="expanded" id="loginHeader"><a href="index.ejs">&nbsp;&nbsp;&larr; Home</a></header>
+<br>
+<img src="public/images/petoskeylogo.png" class="float-center loginImage" width="200">
+
+<div class="login-page">
+    <div class="form">
+    <form class="login-form">
+        <input type="text" placeholder="full name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="login.ejs">Sign In</a></p>
+    </form>
+    </div>
+</div>
+
+<% include /public/views/footer.ejs %>

@@ -1,0 +1,182 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="public/css/styles.css" rel="stylesheet">
+    <title>City of Petoskey</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/favicons.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/favicons.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/favicons.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/favicons.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/favicons.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/favicons.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/favicons.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/favicons.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicons.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="public/favicons.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicons.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicons.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicons.ico/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>-->
+<%include /public/views/header.ejs%>
+<div class="290">
+<header>
+    <div class="expanded text-center" id="header">
+        City of Petoskey
+    </div>
+    <div class="expanded text-left" id="menu">
+        <div id="o-wrapper" class="o-wrapper">
+            <div class="c-buttons">
+                <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
+            </div>
+        </div>
+        <div id="c-mask" class="c-mask"></div>
+        <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            <button class="c-menu__close">&larr; Close Menu</button>
+            <ul class="c-menu__items">
+                <li class="c-menu__item"><a href="index.ejs" class="c-menu__link">Home</a></li>
+                <li class="c-menu__item"><a href="Report.ejs" class="c-menu__link">Report an Infrastructure Issue</a></li>
+                <li class="c-menu__item"><a href="Parks.ejs" class="c-menu__link">Parks and Rec.</a></li>
+                <li class="c-menu__item"><a href="Guide.ejs" class="c-menu__link">City Guide</a></li>
+                <li class="c-menu__item"><a href="Calendar.ejs" class="c-menu__link">Calendar</a></li>
+                <li class="c-menu__item"><a href="Resources.ejs" class="c-menu__link">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+<div class="tabOuter text-center medium-centered">
+    <a href="Report.ejs" class="tabInner">
+        <img src="public/images/road-1.jpg" alt="road" width="250">
+        <div class="tabText">
+            Report an Infrastructure Issue
+        </div>
+    </a>
+</div>
+<div class="tabOuter text-center medium-centered">
+    <a href="Parks.ejs" class="tabInner">
+        <img src="public/images/park.jpg" alt="park" width="250">
+        <div class="tabText">
+            Parks and Rec.
+        </div>
+    </a>
+</div>
+<div class="tabOuter text-center medium-centered">
+    <a href="Guide.ejs" class="tabInner">
+        <img src="public/images/downtown.jpg" alt="downtown" width="250">
+        <div class="tabText">
+            City Guide
+        </div>
+    </a>
+</div>
+<div class="tabOuter text-center medium-centered">
+    <a href="Calendar.ejs" class="tabInner">
+        <img src="public/images/images.jpg" alt="calendar" width="250">
+        <div class="tabText">
+            Calendar
+        </div>
+    </a>
+</div>
+<div class="tabOuter text-center medium-centered">
+    <a href="Resources.ejs" class="tabInner">
+        <img src="public/images/stone.jpg" alt="petoskey stone" width="250">
+        <div class="tabText">
+            Resources
+        </div>
+    </a>
+</div>
+<br>
+
+</div>
+
+<div class="700">
+
+<header>
+    <div class="expanded text-center" id="header">
+        City of Petoskey
+    </div>
+    <div class="expanded text-left" style="padding-top: .6rem; padding-bottom: .6rem" id="menu">
+        <a style="margin-left: 12px; margin-right: 12px" href="Report.ejs">Report an Infrastructure Issue</a><a href="Parks.ejs" style="margin-left: 12px; margin-right: 12px">Parks and Rec.</a><a href="Report.ejs" style="margin-left: 12px; margin-right: 12px">City Guide</a><a href="Calendar.ejs" style="margin-left: 12px; margin-right: 12px">Calendar</a><a href="Resources.ejs" style="margin-left: 12px; margin-right: 12px">Resources</a><span class="text-right" id="login"><a href="login.ejs" style="text-shadow:1px 1px 1px #000; margin-left: 100px;">Login</a> | <a href="signup.ejs" style="text-shadow:1px 1px 1px #000;">Create Account</a></span>
+    </div>
+</header>
+
+<body>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script><script language="javascript">'use strict';$(function() {var width = 720; var animationSpeed = 2550; var pause = 4200; var currentSlide = 1;var $slider = $('#slider'); var $slideContainer = $('.slides', $slider); var $slides = $('.slide', $slider); var interval; function startSlider() { interval = setInterval(function() { $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {if (++currentSlide === $slides.length) {currentSlide = 1; $slideContainer.css('margin-left', 0); }});}, pause);} function pauseSlider() {clearInterval(interval);}$slideContainer.on('mouseenter', pauseSlider).on('mouseleave', startSlider);startSlider();});</script><div style="width: 720px; margin: 0 auto;"><div style="position: relative; width: 720px; ">
+        <style type="text/css">#gpoy {position: absolute; right:-150px; top:3px; padding: 3px 7px 3px; z-index:99; opacity: 0.6; transition: 1s; }.repper {width: 726px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 0px; }.repper:hover #gpoy {transition: 2s; right:3px; }</style><div class="repper"><div id="gpoy"><A style="font-weight: normal; color: #FFFFFF; text-decoration:none; font-size:7pt; line-height:10px; font-family: arial;" HREF="http://www.123-slideshow.com" TARGET="_blank">HTML Slideshow</A></div><style type="text/css">#slider {width: 720px; height: 400px; border: 3px solid #FFFFFF; border-radius: 0px; overflow: hidden; position: relative;  cursor: hand; cursor: pointer}#slider .slides {width: 5040px; height: 400px;  display: block; margin: 0; padding: 0;}#slider .slide {width: 720px; height: 400px; float: left; list-style-type: none;}.MIW170419 {position: absolute; max-width: 720px; margin: 0px;}.c67301  {position: absolute; bottom: 0px; width:100%;  padding: 12px; background-color: rgba(0, 0, 0, 0.7); color: #FFFFF; font-size:24pt; font-family:Tahoma; text-align:center; line-height:48px; z-index:33; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}</style>
+
+            <div id="slider">
+                <ul class="slides">
+
+                    <li class="slide slide1">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-2.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide2">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-3.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide3">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-6.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide4">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-7.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide5">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-8.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide6">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-9.jpg">
+                        </figure>
+                    </li>
+
+                    <li class="slide slide1">
+                        <figure class="MIW170419">
+                            <IMG SRC="123-slideshow/67301-2.jpg">
+                        </figure>
+                    </li>
+
+                </ul></div></div></div>
+</div>
+
+<div style="margin-right: 40px; float: right;">
+    <div>
+        <span class="bodyHeader">This could be an interesting article or post</span><br>
+        <p class="bodyText">words and things could go here if that sounds good to the group</p>
+    </div>
+</div>
+
+<div style="margin-left: 40px; position: relative"><a class="twitter-timeline" data-width="370" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/PetoskeyArea">Tweets by PetoskeyArea</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div>
+
+<div class="footerTop expanded text-center">
+    Follow us<br>
+    <a href="https://www.facebook.com/PetoskeyArea/"><img src="public/images/fblogo.png" width="50"></a>&nbsp;<a href="https://twitter.com/PetoskeyArea/"><img src="public/images/twitter.png" width="50"></a><a href="https://www.instagram.com/petoskeyarea/"><img src="public/images/insta.png" width="55"></a><a href="https://www.youtube.com/user/PetoskeyArea/"><img src="public/images/youtube.png" width="50"></a>&nbsp;<a href="https://www.pinterest.com/petoskeyarea/"><img src="public/images/pinterest.png" width="50"></a>&nbsp;<a href="http://blog.petoskeyarea.com/"><img src="public/images/blog.png" width="50"></a>
+</div>
+
+<div class="expanded footer text-center">
+    © 2017 Copyright by Petoskey Area Visitors Bureau • All Rights Reserved.
+</div>
+
+<script src="public/javascripts/main.js"></script>
+</body>
+</html>

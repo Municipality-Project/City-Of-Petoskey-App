@@ -1,357 +1,75 @@
-@import url(foundation.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lato");
-a {
-  color: inherit; }
+/*
+Error: Invalid CSS after ".content.": expected class name, was "700"
+        on line 406 of /Users/HarrisSchwartz/Documents/WEBDEV/City-Of-Petoskey-App/public/css/styles.scss
 
-body {
-  font-family: "Lato"; }
+401:   -ms-animation-fill-mode:forwards; /*IE 10+*\/
+402: }
+403: 
+404: @media all and (max-width: 959px) {
+405: 
+406:   .content.700 {display:block;}
+407:   .content.490 {display:none;}
+408:   .content.290 {display:none;}
+409: 
+410: }
+411: 
 
-#header {
-  background-color: #0a4063;
-  font-size: 36px;
-  color: white;
-  font-weight: 800;
-  padding-top: .6rem;
-  padding-bottom: .6rem;
-  text-shadow: 1px 1px 1px #000; }
-
-#menu {
-  background-color: #8a8a8a;
-  font-size: 22px;
-  color: white;
-  font-weight: 800;
-  padding-top: .3rem;
-  padding-bottom: .3rem;
-  text-shadow: 1px 1px 1px #000; }
-
-#map {
-  height: 100%; }
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-
-.tabOuter {
-  margin-top: 1.6rem;
-  margin-left: 1.4rem;
-  margin-right: 1.4rem;
-  padding: 10px;
-  padding-top: 20px;
-  background-color: #0a4063; }
-
-.tabInner {
-  margin-top: .5rem;
-  margin-bottom: .3rem; }
-
-.tabText {
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: .3rem;
-  text-shadow: 1px 1px 1px #000; }
-
-.c-menu {
-  position: fixed;
-  z-index: 200;
-  background-color: #0a4063;
-  transition: transform 0.3s; }
-
-.c-menu__items {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-/**
- * Close button resets.
- */
-.c-menu__close {
-  color: #fff;
-  background-color: #0a4063;
-  font-size: 14px;
-  border: none;
-  box-shadow: none;
-  border-radius: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer; }
-
-/**
- * Close button resets.
- */
-.c-menu__close:focus {
-  outline: none; }
-
-/**
- * Body states.
- *
- * When a menu is active, we want to hide the overflows on the body to prevent
- * awkward document scrolling.
- */
-body.has-active-menu {
-  overflow: hidden; }
-
-/**
- * Mask component
- */
-.c-mask {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  background-color: #000;
-  opacity: 0;
-  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s; }
-
-.c-mask.is-active {
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s; }
-
-.c-menu--slide-left,
-.c-menu--slide-right,
-.c-menu--push-left,
-.c-menu--push-right {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll; }
-
-@media all and (min-width: 320px) {
-  .c-menu--slide-left,
-  .c-menu--slide-right,
-  .c-menu--push-left,
-  .c-menu--push-right {
-    width: 300px; } }
-.c-menu--slide-left .c-menu__item,
-.c-menu--slide-right .c-menu__item,
-.c-menu--push-left .c-menu__item,
-.c-menu--push-right .c-menu__item {
-  display: block;
-  text-align: center;
-  border-top: solid 1px white;
-  border-bottom: solid 1px #0a4063; }
-
-.c-menu--slide-left .c-menu__item:first-child,
-.c-menu--slide-right .c-menu__item:first-child,
-.c-menu--push-left .c-menu__item:first-child,
-.c-menu--push-right .c-menu__item:first-child {
-  border-top: none; }
-
-.c-menu--slide-left .c-menu__item:last-child,
-.c-menu--slide-right .c-menu__item:last-child,
-.c-menu--push-left .c-menu__item:last-child,
-.c-menu--push-right .c-menu__item:last-child {
-  border-bottom: none; }
-
-.c-menu--slide-left .c-menu__link,
-.c-menu--slide-right .c-menu__link,
-.c-menu--push-left .c-menu__link,
-.c-menu--push-right .c-menu__link {
-  display: block;
-  padding: 12px 24px;
-  color: #fff; }
-
-.c-menu--slide-left .c-menu__close,
-.c-menu--slide-right .c-menu__close,
-.c-menu--push-left .c-menu__close,
-.c-menu--push-right .c-menu__close {
-  display: block;
-  padding: 12px 24px;
-  width: 100%; }
-
-.c-menu--slide-left,
-.c-menu--push-left {
-  top: 0;
-  left: 0;
-  transform: translateX(-100%); }
-
-@media all and (min-width: 320px) {
-  .c-menu--slide-left,
-  .c-menu--push-left {
-    transform: translateX(-300px); } }
-.c-menu--slide-left.is-active,
-.c-menu--push-left.is-active {
-  transform: translateX(0); }
-
-.o-wrapper.has-push-left {
-  transform: translateX(100%); }
-
-@media all and (min-width: 320px) {
-  .o-wrapper.has-push-left {
-    transform: translateX(300px); } }
-.o-wrapper.has-push-right {
-  transform: translateX(-100%); }
-
-@media all and (min-width: 320px) {
-  .o-wrapper.has-push-right {
-    transform: translateX(-300px); } }
-.pageHeader {
-  color: #0a4063;
-  font-size: 30px;
-  font-weight: 600;
-  padding-top: .6rem;
-  padding-bottom: .6rem; }
-
-.bodyText {
-  font-size: 18px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px; }
-
-.bodyHeader {
-  color: #0a4063;
-  font-size: 18px;
-  font-weight: bold; }
-
-.footer {
-  background-color: #0a4063;
-  font-size: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  color: white; }
-
-.footerTop {
-  background-color: #8a8a8a;
-  font-size: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  color: white; }
-
-#login {
-  margin-left: 40px;
-  text-shadow: none; }
-
-.loginImage {
-  z-index: 100;
-  position: relative; }
-
-.login-page {
-  position: relative;
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-  margin-top: -50px; }
-
-.form {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center; }
-
-.form input {
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px; }
-
-.form button {
-  text-transform: uppercase;
-  outline: 0;
-  background: #0a4063;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer; }
-
-.form button:hover, .form button:active, .form button:focus {
-  background: #2245b3; }
-
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px; }
-
-.form .message a {
-  color: #0a4063;
-  text-decoration: none; }
-
-.form .register-form {
-  display: none; }
-
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 300px;
-  margin: 0 auto; }
-
-.container:before, .container:after {
-  content: "";
-  display: block;
-  clear: both; }
-
-.container .info {
-  margin: 50px auto;
-  text-align: center; }
-
-.container .info h1 {
-  margin: 0 0 15px;
-  padding: 0;
-  font-size: 36px;
-  font-weight: 300;
-  color: #1a1a1a; }
-
-.container .info span {
-  color: #4d4d4d;
-  font-size: 12px; }
-
-.container .info span a {
-  color: #000000;
-  text-decoration: none; }
-
-.container .info span .fa {
-  color: #EF3B3A; }
-
-#loginHeader {
-  background-color: #0a4063;
-  font-size: 20px;
-  color: white;
-  font-weight: 500;
-  padding-top: .6rem;
-  padding-bottom: .6rem; }
-
-.element-animation {
-  animation: animationFrames ease 1s;
-  animation-iteration-count: 1;
-  transform-origin: 50% 50%;
-  animation-fill-mode: forwards;
-  /*when the spec is finished*/
-  -webkit-animation: animationFrames ease 1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-transform-origin: 50% 50%;
-  -webkit-animation-fill-mode: forwards;
-  /*Chrome 16+, Safari 4+*/
-  -moz-animation: animationFrames ease 1s;
-  -moz-animation-iteration-count: 1;
-  -moz-transform-origin: 50% 50%;
-  -moz-animation-fill-mode: forwards;
-  /*FF 5+*/
-  -o-animation: animationFrames ease 1s;
-  -o-animation-iteration-count: 1;
-  -o-transform-origin: 50% 50%;
-  -o-animation-fill-mode: forwards;
-  /*Not implemented yet*/
-  -ms-animation: animationFrames ease 1s;
-  -ms-animation-iteration-count: 1;
-  -ms-transform-origin: 50% 50%;
-  -ms-animation-fill-mode: forwards;
-  /*IE 10+*/ }
-
-/*# sourceMappingURL=styles.css.map */
+Backtrace:
+/Users/HarrisSchwartz/Documents/WEBDEV/City-Of-Petoskey-App/public/css/styles.scss:406
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:191:in `class_selector'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:159:in `simple_selector_sequence'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:112:in `selector'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:86:in `selector_comma_sequence'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1079:in `expr!'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:414:in `visit_rule'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:502:in `visit_media'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala 2.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+/Applications/Koala 2.app/Contents/Resources/app.nw/bin/sass:18:in `load'
+/Applications/Koala 2.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".content.\": expected class name, was \"700\"\A         on line 406 of /Users/HarrisSchwartz/Documents/WEBDEV/City-Of-Petoskey-App/public/css/styles.scss\A \A 401:   -ms-animation-fill-mode:forwards; /*IE 10+*/\A 402: }\A 403: \A 404: @media all and (max-width: 959px) {\A 405: \A 406:   .content.700 {display:block;}\A 407:   .content.490 {display:none;}\A 408:   .content.290 {display:none;}\A 409: \A 410: }\A 411: "; }
