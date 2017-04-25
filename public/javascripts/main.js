@@ -1,141 +1,159 @@
-(function(window) {
+class main {
+    constructor() {
+        main.initMap();
+        main.menu();
+    }
 
-     'use strict';
+    static initMap() {
+        let map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 45.3733, lng: -84.9553},
+            zoom: 12
+        });
+    }
 
-     /**
-      * Extend Object helper function.
-      */
-     function extend(a, b) {
-          for(var key in b) {
-               if(b.hasOwnProperty(key)) {
-                    a[key] = b[key];
-               }
-          }
-          return a;
-     }
+    static menu() {
+        (function(window) {
 
-     /**
-      * Each helper function.
-      */
-     function each(collection, callback) {
-          for (var i = 0; i < collection.length; i++) {
-               var item = collection[i];
-               callback(item);
-          }
-     }
+            'use strict';
 
-     /**
-      * Menu Constructor.
-      */
-     function Menu(options) {
-          this.options = extend({}, this.options);
-          extend(this.options, options);
-          this._init();
-     }
+            /**
+             * Extend Object helper function.
+             */
+            function extend(a, b) {
+                for(var key in b) {
+                    if(b.hasOwnProperty(key)) {
+                        a[key] = b[key];
+                    }
+                }
+                return a;
+            }
 
-     /**
-      * Menu Options.
-      */
-     Menu.prototype.options = {
-          wrapper: '#o-wrapper',          // The content wrapper
-          type: 'slide-left',             // The menu type
-          menuOpenerClass: '.c-button',   // The menu opener class names (i.e. the buttons)
-          maskId: '#c-mask'               // The ID of the mask
-     };
+            /**
+             * Each helper function.
+             */
+            function each(collection, callback) {
+                for (var i = 0; i < collection.length; i++) {
+                    var item = collection[i];
+                    callback(item);
+                }
+            }
 
-     /**
-      * Initialise Menu.
-      */
-     Menu.prototype._init = function() {
-          this.body = document.body;
-          this.wrapper = document.querySelector(this.options.wrapper);
-          this.mask = document.querySelector(this.options.maskId);
-          this.menu = document.querySelector('#c-menu--' + this.options.type);
-          this.closeBtn = this.menu.querySelector('.c-menu__close');
-          this.menuOpeners = document.querySelectorAll(this.options.menuOpenerClass);
-          this._initEvents();
-     };
+            /**
+             * Menu Constructor.
+             */
+            function Menu(options) {
+                this.options = extend({}, this.options);
+                extend(this.options, options);
+                this._init();
+            }
 
-     /**
-      * Initialise Menu Events.
-      */
-     Menu.prototype._initEvents = function() {
-          // Event for clicks on the close button inside the menu.
-          this.closeBtn.addEventListener('click', function(e) {
-               e.preventDefault();
-               this.close();
-          }.bind(this));
+            /**
+             * Menu Options.
+             */
+            Menu.prototype.options = {
+                wrapper: '#o-wrapper',          // The content wrapper
+                type: 'slide-left',             // The menu type
+                menuOpenerClass: '.c-button',   // The menu opener class names (i.e. the buttons)
+                maskId: '#c-mask'               // The ID of the mask
+            };
 
-          // Event for clicks on the mask.
-          this.mask.addEventListener('click', function(e) {
-               e.preventDefault();
-               this.close();
-          }.bind(this));
-     };
+            /**
+             * Initialise Menu.
+             */
+            Menu.prototype._init = function() {
+                this.body = document.body;
+                this.wrapper = document.querySelector(this.options.wrapper);
+                this.mask = document.querySelector(this.options.maskId);
+                this.menu = document.querySelector('#c-menu--' + this.options.type);
+                this.closeBtn = this.menu.querySelector('.c-menu__close');
+                this.menuOpeners = document.querySelectorAll(this.options.menuOpenerClass);
+                this._initEvents();
+            };
 
-     /**
-      * Open Menu.
-      */
-     Menu.prototype.open = function() {
-          this.body.classList.add('has-active-menu');
-          this.wrapper.classList.add('has-' + this.options.type);
-          this.menu.classList.add('is-active');
-          this.mask.classList.add('is-active');
-          this.disableMenuOpeners();
-     };
+            /**
+             * Initialise Menu Events.
+             */
+            Menu.prototype._initEvents = function() {
+                // Event for clicks on the close button inside the menu.
+                this.closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.close();
+                }.bind(this));
 
-     /**
-      * Close Menu.
-      */
-     Menu.prototype.close = function() {
-          this.body.classList.remove('has-active-menu');
-          this.wrapper.classList.remove('has-' + this.options.type);
-          this.menu.classList.remove('is-active');
-          this.mask.classList.remove('is-active');
-          this.enableMenuOpeners();
-     };
+                // Event for clicks on the mask.
+                this.mask.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.close();
+                }.bind(this));
+            };
 
-     /**
-      * Disable Menu Openers.
-      */
-     Menu.prototype.disableMenuOpeners = function() {
-          each(this.menuOpeners, function(item) {
-               item.disabled = true;
-          });
-     };
+            /**
+             * Open Menu.
+             */
+            Menu.prototype.open = function() {
+                this.body.classList.add('has-active-menu');
+                this.wrapper.classList.add('has-' + this.options.type);
+                this.menu.classList.add('is-active');
+                this.mask.classList.add('is-active');
+                this.disableMenuOpeners();
+            };
 
-     /**
-      * Enable Menu Openers.
-      */
-     Menu.prototype.enableMenuOpeners = function() {
-          each(this.menuOpeners, function(item) {
-               item.disabled = false;
-          });
-     };
+            /**
+             * Close Menu.
+             */
+            Menu.prototype.close = function() {
+                this.body.classList.remove('has-active-menu');
+                this.wrapper.classList.remove('has-' + this.options.type);
+                this.menu.classList.remove('is-active');
+                this.mask.classList.remove('is-active');
+                this.enableMenuOpeners();
+            };
 
-     /**
-      * Add to global namespace.
-      */
-     window.Menu = Menu;
+            /**
+             * Disable Menu Openers.
+             */
+            Menu.prototype.disableMenuOpeners = function() {
+                each(this.menuOpeners, function(item) {
+                    item.disabled = true;
+                });
+            };
 
-})(window);
+            /**
+             * Enable Menu Openers.
+             */
+            Menu.prototype.enableMenuOpeners = function() {
+                each(this.menuOpeners, function(item) {
+                    item.disabled = false;
+                });
+            };
 
-var slideLeft = new Menu({
-     wrapper: '#o-wrapper',
-     type: 'slide-left',
-     menuOpenerClass: '.c-button',
-     maskId: '#c-mask'
-});
+            /**
+             * Add to global namespace.
+             */
+            window.Menu = Menu;
 
-var slideLeftBtn = document.querySelector('#c-button--slide-left');
+        })(window);
 
-slideLeftBtn.addEventListener('click', function(e) {
-     e.preventDefault;
-     slideLeft.open();
-});
+        var slideLeft = new Menu({
+            wrapper: '#o-wrapper',
+            type: 'slide-left',
+            menuOpenerClass: '.c-button',
+            maskId: '#c-mask'
+        });
+
+        var slideLeftBtn = document.querySelector('#c-button--slide-left');
+
+        slideLeftBtn.addEventListener('click', function(e) {
+            e.preventDefault;
+            slideLeft.open();
+        });
+    }
 
 
-/*Nicolas' Tinker Hole. DO NOT TOUCH!
-document.getElementById('header').addEventListener('click', () => {
-     alert('Get this working!');
-});*/
+}
+
+window.addEventListener('load', () => {
+    new main();
+})
+;

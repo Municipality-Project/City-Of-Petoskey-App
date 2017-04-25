@@ -400,3 +400,23 @@ body.has-active-menu {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode:forwards; /*IE 10+*/
 }
+
+@media only screen
+and (max-width: 479px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen
+and (min-width: 800px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
