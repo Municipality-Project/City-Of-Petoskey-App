@@ -133,3 +133,9 @@ slideLeftBtn.addEventListener('click', function(e) {
      e.preventDefault;
      slideLeft.open();
 });
+
+
+/*Nicolas' Tinker Hole. DO NOT TOUCH!
+document.getElementById('header').addEventListener('click', () => {
+     alert('Get this working!');
+});*/
