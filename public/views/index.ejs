@@ -8,14 +8,14 @@
         <div class="expanded text-left" id="menu">
             <div id="o-wrapper" class="o-wrapper">
                 <div class="c-buttons">
-                    <button id="c-button--slide-left" class="c-button"><img src="public/images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
+                    <button id="c-button--slide-left" class="c-button"><img src="../images/bar-icon.png" width="30">Menu</button><span class="text-right" id="login"><a href="login.ejs">Login</a> | <a href="signup.ejs">Create Account</a></span>
                 </div>
             </div>
             <div id="c-mask" class="c-mask"></div>
             <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
                 <button class="c-menu__close">&larr; Close Menu</button>
                 <ul class="c-menu__items">
-                    <li class="c-menu__item"><a href="home.html" class="c-menu__link">Home</a></li>
+                    <li class="c-menu__item"><a href="index.ejs" class="c-menu__link">Home</a></li>
                     <li class="c-menu__item"><a href="report.ejs" class="c-menu__link">Report an Infrastructure Issue</a></li>
                     <li class="c-menu__item"><a href="parks.ejs" class="c-menu__link">Parks and Rec.</a></li>
                     <li class="c-menu__item"><a href="guide.ejs" class="c-menu__link">City Guide</a></li>
@@ -28,7 +28,7 @@
 
     <div class="tabOuter text-center medium-centered">
         <a href="report.ejs" class="tabInner">
-            <img src="public/images/road-1.jpg" alt="road" width="250">
+            <img src="../images/road-1.jpg" alt="road" width="250">
             <div class="tabText">
                 Report an Infrastructure Issue
             </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="tabOuter text-center medium-centered">
         <a href="parks.ejs" class="tabInner">
-            <img src="public/images/park.jpg" alt="park" width="250">
+            <img src="../images/park.jpg" alt="park" width="250">
             <div class="tabText">
                 Parks and Rec.
             </div>
@@ -44,7 +44,7 @@
     </div>
     <div class="tabOuter text-center medium-centered">
         <a href="guide.ejs" class="tabInner">
-            <img src="public/images/downtown.jpg" alt="downtown" width="250">
+            <img src="../images/downtown.jpg" alt="downtown" width="250">
             <div class="tabText">
                 City Guide
             </div>
@@ -52,7 +52,7 @@
     </div>
     <div class="tabOuter text-center medium-centered">
         <a href="calendar.ejs" class="tabInner">
-            <img src="public/images/images.jpg" alt="calendar" width="250">
+            <img src="../images/images.jpg" alt="calendar" width="250">
             <div class="tabText">
                 Calendar
             </div>
@@ -60,7 +60,7 @@
     </div>
     <div class="tabOuter text-center medium-centered">
         <a href="resources.ejs" class="tabInner">
-            <img src="public/images/stone.jpg" alt="petoskey stone" width="250">
+            <img src="../images/stone.jpg" alt="petoskey stone" width="250">
             <div class="tabText">
                 Resources
             </div>
@@ -132,9 +132,10 @@
         </div>
     </div>
 
-    <div style="margin-left: 40px"><a class="twitter-timeline" data-width="370" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/PetoskeyArea">Tweets by PetoskeyArea</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-
-    <div style="margin-right: 40px;"><div><span class="bodyHeader">This could be an interesting article or post</span></div></div>
+    <div style="display: flex; margin-top: 30px; margin-left: 40px; margin-right: 40px">
+        <div style="display: inline-block;"><a class="twitter-timeline" data-height="900" data-width="1590" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/PetoskeyArea">Tweets by PetoskeyArea</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <div style="display: inline-block; margin-left: 70px; margin-bottom: 20px; font-size: 28px;"><span class="bodyHeader" style="font-size: 32px;">Welcome to the Petoskey Area</span><br>Along with beautiful beaches, spectacular waterfront settings and an easy-going attitude, our resort communities offer countless things to do and see. They range from laid-back to full-speed ahead, and are sure to bring smile after smile. More than just another pretty place, this is a Michigan treasure.</div>
+    </div>
 </div>
 
 <% include footer.ejs %>
