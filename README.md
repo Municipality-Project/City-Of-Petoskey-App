@@ -1,12 +1,15 @@
-# PWA-Template 2017
+# Municipality of Petoskey App
 
-## Progressive Web Application
+## It is so pretty
 
-### Vanilla ES6/Node, EJS
+### Read this text, it is small
+
+#### This text is even smaller
 
 ---
-**Author:**  hbates@northmen.org
+
+**Author:**  Some cool people like Nic and Harris
 
 **Version:**  0.0.1
 
-**Purpose:**  Put purpose here
+**Purpose:**  Final Project for the year?
