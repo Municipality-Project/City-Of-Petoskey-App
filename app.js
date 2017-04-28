@@ -22,7 +22,6 @@ loadServer() {
                } else if (contentType.indexOf('css') >= 0 || contentType.indexOf('js') >= 0) {
                    response.writeHead(200, {'Content-Type': contentType});
                    response.end(string, 'utf-8');
-
                } else if (contentType.indexOf('html') >= 0) {
                     response.writeHead(200, {'Content-Type': contentType});
                     if (request.url.indexOf('bigly.ejs') >= 0) {
