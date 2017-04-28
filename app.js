@@ -22,12 +22,55 @@ loadServer() {
                } else if (contentType.indexOf('css') >= 0 || contentType.indexOf('js') >= 0) {
                    response.writeHead(200, {'Content-Type': contentType});
                    response.end(string, 'utf-8');
+
                } else if (contentType.indexOf('html') >= 0) {
                     response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'index.ejs'
-                    }));
+                    if (request.url.indexOf('bigly.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'bigly.ejs'
+                         }));
+                    } else if (request.url.indexOf('calendar.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'calendar.ejs'
+                         }));
+                    } else if (request.url.indexOf('guide.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'guide.ejs'
+                         }));
+                    } else if (request.url.indexOf('login.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'login.ejs'
+                         }));
+                    } else if (request.url.indexOf('parks.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'parks.ejs'
+                         }));
+                    } else if (request.url.indexOf('report.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'report.ejs'
+                         }));
+                    } else if (request.url.indexOf('resources.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'resources.ejs'
+                         }));
+                    } else if (request.url.indexOf('signup.ejs') >= 0) {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'signup.ejs'
+                         }));
+                    } else {
+                         response.end(EJS.render(string, {
+                              data: this.ejsData,
+                              filename: 'index.ejs'
+                         }));
+                    }
                } else {
                     response.writeHead(200, {'Content-Type': contentType});
                     response.end(string, 'binary');
