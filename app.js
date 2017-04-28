@@ -28,56 +28,6 @@ loadServer() {
                          data: this.ejsData,
                          filename: 'index.ejs'
                     }));
-
-               } else if (contentType.indexOf('bigly') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'bigly.ejs'
-                    }));
-               } else if (contentType.indexOf('calendar') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'calendar.ejs'
-                    }));
-               } else if (contentType.indexOf('guide') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'guide.ejs'
-                    }));
-               }  else if (contentType.indexOf('login') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'login.ejs'
-                    }));
-               }  else if (contentType.indexOf('parks') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'parks.ejs'
-                    }));
-               }  else if (contentType.indexOf('report') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'report.ejs'
-                    }));
-               }  else if (contentType.indexOf('resources') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'resources.ejs'
-                    }));
-               }  else if (contentType.indexOf('signup') >= 0) {
-                    response.writeHead(200, {'Content-Type': contentType});
-                    response.end(EJS.render(string, {
-                         data: this.ejsData,
-                         filename: 'signup.ejs'
-                    }));
-
                } else {
                     response.writeHead(200, {'Content-Type': contentType});
                     response.end(string, 'binary');
