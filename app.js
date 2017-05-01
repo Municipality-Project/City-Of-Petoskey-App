@@ -16,20 +16,16 @@ loadServer() {
      const EJS = require('ejs');
      HTTP.createServer((request, response) => {
           let httpHandler = (error, string, contentType) => {
+              console.log("content type: " + contentType);
                if (error) {
                    response.writeHead(500, {'Content-Type': 'text/plain'});
                    response.end('An error has occurred: ' + error.message);
-               } else if (contentType.indexOf('css') >= 0 || contentType.indexOf('js') >= 0) {
-                   response.writeHead(200, {'Content-Type': contentType});
-                   response.end(string, 'utf-8');
+               } else if (contentType.indexOf('image') >= 0) {
+                        response.writeHead(200, {'Content-Type': contentType});
+                        response.end(string, 'binary');
                } else if (contentType.indexOf('html') >= 0) {
                     response.writeHead(200, {'Content-Type': contentType});
-                    if (request.url.indexOf('bigly.ejs') >= 0) {
-                         response.end(EJS.render(string, {
-                              data: this.ejsData,
-                              filename: 'bigly.ejs'
-                         }));
-                    } else if (request.url.indexOf('calendar.ejs') >= 0) {
+                    if (request.url.indexOf('calendar.ejs') >= 0) {
                          response.end(EJS.render(string, {
                               data: this.ejsData,
                               filename: 'calendar.ejs'
@@ -72,7 +68,7 @@ loadServer() {
                     }
                } else {
                     response.writeHead(200, {'Content-Type': contentType});
-                    response.end(string, 'binary');
+                    response.end(string);
                }
           };
           if (request.method === 'POST') {
