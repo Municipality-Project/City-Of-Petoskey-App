@@ -16,7 +16,6 @@ loadServer() {
      const EJS = require('ejs');
      HTTP.createServer((request, response) => {
           let httpHandler = (error, string, contentType) => {
-              console.log("content type: " + contentType);
                if (error) {
                    response.writeHead(500, {'Content-Type': 'text/plain'});
                    response.end('An error has occurred: ' + error.message);
