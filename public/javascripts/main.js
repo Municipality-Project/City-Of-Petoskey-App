@@ -1,7 +1,7 @@
 class main {
     constructor() {
         main.initMap();
-        main.menu();
+        // main.menu();
     }
 
     static initMap() {
@@ -12,7 +12,7 @@ class main {
         });
     }
 
-    /*static menu() {
+  /*  static menu() {
         (function(window) {
 
             'use strict';
