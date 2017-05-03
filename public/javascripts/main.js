@@ -1,7 +1,14 @@
 class main {
     constructor() {
         main.initMap();
+        main.loadServiceWorker();
         // main.menu();
+    }
+
+    static loadServiceWorker() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/ServiceWorker.js');
+        }
     }
 
     static initMap() {
