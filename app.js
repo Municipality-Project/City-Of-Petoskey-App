@@ -96,6 +96,8 @@ loadServer() {
                this.render(request.url.slice(1), 'image/png', httpHandler, 'binary');
           } else if (request.url.indexOf('.jpg') >= 0) {
                this.render(request.url.slice(1), 'image/jpeg', httpHandler, 'binary');
+          } else if (request.url.indexOf('.ico') >= 0) {
+               this.render(request.url.slice(1), 'image/x-icon', httpHandler, 'binary');
           } else if (request.url.indexOf('.ejs') >= 0) {
                this.render(request.url.slice(1), 'text/html', httpHandler, 'utf-8');
           } else if (request.url.indexOf('/') >= 0) {
