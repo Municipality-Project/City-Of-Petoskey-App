@@ -6,7 +6,7 @@ class main {
 
     static initMap() {
         let map;
-        map = new (document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 45.3733, lng: -84.9553},
             zoom: 12
         });
