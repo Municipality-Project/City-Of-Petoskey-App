@@ -19,18 +19,19 @@ loadServer() {
                if (error) {
                    response.writeHead(500, {'Content-Type': 'text/plain'});
                    response.end('An error has occurred: ' + error.message);
+<<<<<<< HEAD
                } else if (contentType.indexOf('css') >= 0 || contentType.indexOf('js') >= 0) {
                    response.writeHead(200, {'Content-Type': contentType});
                    response.end(string, 'utf-8');
 
+=======
+               } else if (contentType.indexOf('image') >= 0) {
+                        response.writeHead(200, {'Content-Type': contentType});
+                        response.end(string, 'binary');
+>>>>>>> 3e138e94f7f8d184344d4a02f6e7ac358c4c2b4e
                } else if (contentType.indexOf('html') >= 0) {
                     response.writeHead(200, {'Content-Type': contentType});
-                    if (request.url.indexOf('bigly.ejs') >= 0) {
-                         response.end(EJS.render(string, {
-                              data: this.ejsData,
-                              filename: 'bigly.ejs'
-                         }));
-                    } else if (request.url.indexOf('calendar.ejs') >= 0) {
+                    if (request.url.indexOf('calendar.ejs') >= 0) {
                          response.end(EJS.render(string, {
                               data: this.ejsData,
                               filename: 'calendar.ejs'
@@ -73,7 +74,7 @@ loadServer() {
                     }
                } else {
                     response.writeHead(200, {'Content-Type': contentType});
-                    response.end(string, 'binary');
+                    response.end(string);
                }
           };
           if (request.method === 'POST') {
@@ -102,6 +103,8 @@ loadServer() {
                this.render(request.url.slice(1), 'image/png', httpHandler, 'binary');
           } else if (request.url.indexOf('.jpg') >= 0) {
                this.render(request.url.slice(1), 'image/jpeg', httpHandler, 'binary');
+          } else if (request.url.indexOf('.ico') >= 0) {
+               this.render(request.url.slice(1), 'image/x-icon', httpHandler, 'binary');
           } else if (request.url.indexOf('.ejs') >= 0) {
                this.render(request.url.slice(1), 'text/html', httpHandler, 'utf-8');
           } else if (request.url.indexOf('/') >= 0) {
