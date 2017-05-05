@@ -1,6 +1,6 @@
 {
-  "name": "City-Of-Petoskey-App",
-  "version": "0.0.1",
+  "name": "city-of-petoskey-app",
+  "version": "1.0.0",
   "private": true,
   "description": "A real life of example of making an app for Petoskey",
   "main": "bin/server",
